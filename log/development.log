@@ -339,3 +339,46 @@ Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-26 23:16:24 
   [1m[35m (0.0ms)[0m  SELECT version FROM "schema_migrations"
   [1m[36m (10.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130927060835')[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-26 23:20:50 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendered C:/Ruby200/lib/ruby/gems/2.0.0/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (1.0ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-26 23:22:30 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 496ms (Views: 469.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-26 23:22:31 -0700
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-09-26 23:22:31 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-26 23:22:31 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-26 23:22:31 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-26 23:22:31 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-09-26 23:22:31 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-26 23:22:31 -0700
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-09-26 23:22:31 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-09-26 23:22:31 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-26 23:22:31 -0700
