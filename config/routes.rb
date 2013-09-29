@@ -1,7 +1,9 @@
 Blog::Application.routes.draw do
 
   get "home/index"
-
+  
+  get '/sign_up' => 'users#new'
+  
   resources :users do
     resources :posts    
   end
