@@ -1,9 +1,9 @@
 Blog::Application.routes.draw do
-
-  get "home/index"
   
+  get "home/index" #=> 'home#index' # i think this is right  
+  get '/' => 'home#index'
   get '/sign_up' => 'users#new'
-  
+  get 'users/index' => 'users#index'
   resources :users do
     resources :posts    
   end
