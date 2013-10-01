@@ -22,15 +22,19 @@
     <div class="navbar-collapse collapse">
 
 	    <ul class="nav navbar-nav navbar-right">
-              <% if current_user %>
-  	        <%= link_to "Sign Out", sign_out_path, method: "delete" %>
- 	      <% else %>		      
-                <li><%= link_to 'Sign In', sign_in_path =%></li>
+		    <li><%= link_to "Users", users_index_path %></li>
+	        <% if current_user %>  
+		      <li><%= link_to "Edit", edit_user_path(current_user) %></li>
+			  
+  	          <li><%= link_to "Sign Out", sign_out_path, method: "delete" %></li>
+ 	        <% else %>		      
+              <li><%= link_to 'Sign In', sign_in_path =%></li>
 				
-		<li><%= link_to 'Sign Up', sign_up_path %></li>
-	      <% end %>
+		      <li><%= link_to 'Sign Up', sign_up_path %></li>
+	        <% end %>
             
-      </ul>
+        </ul>
+	  
     </div>
   </div>
 
