@@ -21,14 +21,10 @@
 
     <div class="navbar-collapse collapse">
 
-	    <ul class="nav navbar-nav navbar-right">
-              <% if current_user %>
-  	        <%= link_to "Sign Out", sign_out_path, method: "delete" %>
- 	      <% else %>		      
+      <ul class="nav navbar-nav navbar-right">
                 <li><%= link_to 'Sign In', sign_in_path =%></li>
 				
-		<li><%= link_to 'Sign Up', sign_up_path %></li>
-	      <% end %>
+                <li><%= link_to 'Sign Up', sign_up_path %></li>
             
       </ul>
     </div>

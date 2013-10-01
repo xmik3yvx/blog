@@ -1,6 +1,9 @@
 Blog::Application.routes.draw do
   
-  get "home/index" #=> 'home#index' # i think this is right  
+  resources :sessions, only: %i[new create destroy]
+  get '/sign_in' => 'sessions#new'
+  delete '/sign_out' => 'sessions#destroy'
+  #get 'home/index' => 'home#index' # i think this is right  
   get '/' => 'home#index'
   get '/sign_up' => 'users#new'
   get 'users/index' => 'users#index'
