@@ -5,6 +5,7 @@ class CreatePosts < ActiveRecord::Migration
       t.integer :user_id
 
       t.timestamps
+	  t.references :post
     end
   end
 end
