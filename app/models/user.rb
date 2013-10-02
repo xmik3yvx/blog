@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 
   before_create :create_remember_token
   has_secure_password
-
+  has_many :posts, dependent: :destroy
   before_save do
     self.email = email.downcase 
 	self.username = username.downcase

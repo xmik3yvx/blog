@@ -16,10 +16,20 @@
       <tr>
         <td><%= user.username %></td>
         <td><%= user.email %></td>
-        <td><%= link_to ' Show', user %></td>
+		
+		<td><button type="button" class="btn btn-default btn-xs">
+                <%= link_to ' Show', user %>
+              </button></td>
+		
 		<% if current_user == user %>
-          <td><%= link_to 'Edit', edit_user_path(user) %></td>
-          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		  <td><button type="button" class="btn btn-default btn-xs">
+                <%= link_to ' Edit', edit_user_path(user) %>
+              </button></td>
+			  
+		  <td><button type="button" class="btn btn-default btn-xs">
+                <%= link_to ' Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }  %>
+              </button></td>
+          
 		<% end %>
       </tr>
     <% end %>
@@ -28,4 +38,3 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>

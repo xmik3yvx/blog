@@ -7,8 +7,9 @@ Blog::Application.routes.draw do
   get '/' => 'home#index'
   get '/sign_up' => 'users#new'
   get 'users/index' => 'users#index'
+  get '/posts/new' => 'posts#new'
   resources :users do
-    resources :posts    
+    resources :posts, only: [:create, :destroy]   
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

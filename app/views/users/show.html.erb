@@ -10,6 +10,13 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
+<% if current_user %>  
+  <%= link_to 'new post'%>
+<% end %>
+<% if @user.posts.any? %>
+      <h3>posts (<%= @user.posts.count %>)</h3>
+      
+        <%= render @posts %>
+      
+    <% end %>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
