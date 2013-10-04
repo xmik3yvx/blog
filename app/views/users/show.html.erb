@@ -11,8 +11,10 @@
   <%= @user.email %>
 </p>
 <% if current_user==@user %>  
+
+
   
-     <h2>Add a post:</h2>
+     <h2>Write a new post:</h2>
   <%= form_for([@user, @user.posts.build]) do |f| %>
   <p>
     <%= f.label :content %><br />
@@ -27,12 +29,19 @@
   </p>
   <% end %> 
   
+
   
 <% end %>
-<% if @user.posts.any? %>
-      <h3>posts (<%= @user.posts.count %>)</h3>
-      
+   
+   
+   <h2>Previous posts</h2>
+     <% @user.posts.each do |post| %>
+  <p>
+    <strong>========</strong>
+	</br>
+    <%= post.content %>
+  </p>
+<% end %>
         
       
-    <% end %>
 

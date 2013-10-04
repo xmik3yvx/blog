@@ -8,6 +8,7 @@ class PostsController < ApplicationController
 
   
   def show
+    @posts = Posts.find(params[:id])
   end
 
   
@@ -21,11 +22,11 @@ class PostsController < ApplicationController
 
   
   def create
-    @post = @user.post.new(post_params)
-
+    @user = User.find(params[:user_id])
+    @post = @user.posts.create(params[:post].permit(:content))
     respond_to do |format|
       if @post.save
-        format.html { redirect_to root_url, notice: 'Post was successfully created.' }
+        format.html { redirect_to @user, notice: 'Post was successfully created.' }
         format.json { render action: 'show', status: :created, location: @post }
       else
         format.html { render action: root, notice: 'post not saved' }
