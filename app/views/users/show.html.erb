@@ -1,17 +1,13 @@
-
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Username:</strong>
-  <%= @user.username %>
-</p>
+<div class="hero-unit">
+      <h1>
+	  <%= @user.username %>'s page
+	</h1>
+</div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+
 <% if current_user==@user %>  
-
 
   
      <h2>Write a new post:</h2>
@@ -25,16 +21,19 @@
     <%= f.text_area :user_id %>
   </p>
   <p>
-    <%= f.submit %>
+    <input class = "btn btn-large btn-primary" name="commit" type="submit" value="Crete Post" />
+
   </p>
+  
   <% end %> 
   
 
   
 <% end %>
    
-   
-   <h2>Previous posts</h2>
+ <%= paginate @users.post %>  
+ <h2>Previous posts</h2>
+ 
      <% @user.posts.each do |post| %>
   <p>
     <strong>========</strong>
@@ -42,6 +41,4 @@
     <%= post.content %>
   </p>
 <% end %>
-        
-      
-
+ 

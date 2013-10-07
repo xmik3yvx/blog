@@ -4,13 +4,16 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
+group :production do
+  gem 'pq'
+  gem 'rails_12factor'
+end
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
-
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -27,6 +30,7 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
@@ -38,6 +42,10 @@ end
 # Use ActiveModel has_secure_password
  gem 'bcrypt-ruby', '~> 3.0.1'
 
+ gem 'will_paginate', '3.0.4'
+ gem 'bootstrap-will_paginate', '0.0.9'
+ gem 'kaminari' 
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
@@ -47,8 +55,10 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
 group :development, :test do
   gem 'capybara'
   gem 'rspec-rails', '~> 2.0'
+  gem 'sqlite3'
 end
 
