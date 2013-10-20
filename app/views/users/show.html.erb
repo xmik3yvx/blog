@@ -31,13 +31,13 @@
   
 <% end %>
     
- <h2>Previous posts</h2>
+<h2>Previous posts</h2>
  
-     <% @user.posts.each do |post| %>
-  <p>
-    <strong>========</strong>
-	</br>
-    <%= post.content %>
-  </p>
+  <% @user.posts.each do |post| %>
+    <p>
+      <strong>========</strong>
+      </br>
+      <%= post.content %>
+    </p>
 <% end %>
  

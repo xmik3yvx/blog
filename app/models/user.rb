@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   has_many :posts, dependent: :destroy
   before_save do
     self.email = email.downcase 
-	self.username = username.downcase
+	  self.username = username.downcase
   end
   
   validates :username, presence: true
